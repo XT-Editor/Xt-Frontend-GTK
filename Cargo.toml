@@ -3,9 +3,21 @@ name = "xtensis-gtk"
 version = "0.1.0"
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
 
+[lib]
+name = "xtensis_gtk"
+path = "src/lib.rs"
+
+[[bin]]
+name = "xtg"
+path = "src/bin/xtensis-gtk.rs"
+
 [dependencies]
 
 [dependencies.gtk]
 version = "0.1.1"
 features = ["v3_10"]
+
+[dependencies.clippy]
+version = "0.0.103"
+optional = true
 
