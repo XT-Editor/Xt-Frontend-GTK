@@ -5,11 +5,7 @@ CARGO_OPTS :=
 
 GRAPHVIZ_BUILDER := dot
 
-all:
-	${MAKE} build
-	${MAKE} test
-	${MAKE} doc
-	${MAKE} doc_info
+all: build test doc
 
 build:
 	${CARGO} ${CARGO_OPTS} build
@@ -37,10 +33,5 @@ doc_gen_html:
 
 doc_gen_info:
 	cd doc/sphinx && make info
-
-dot_core_relations:
-	cd doc/graphviz; \
-	${GRAPHVIZ_BUILDER} -Tpng -o core-relations.png \
-		core-relations.dot
 
 .PHONY: all clean
