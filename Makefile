@@ -23,10 +23,8 @@ test:
 bench:
 	${CARGO} ${CARGO_OPTS} bench
 
-doc:
+doc: doc_gen_html doc_gen_info
 	${CARGO} ${CARGO_OPTS} doc
-	${MAKE} doc_gen_html
-	${MAKE} doc_gen_info
 
 doc_gen_html:
 	cd doc/sphinx && make html
@@ -34,4 +32,4 @@ doc_gen_html:
 doc_gen_info:
 	cd doc/sphinx && make info
 
-.PHONY: all clean
+.PHONY: all build clean ci-check test bench doc doc_gen_html doc_gen_info
