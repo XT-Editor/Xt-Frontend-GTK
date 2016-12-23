@@ -18,6 +18,5 @@ version = "0.1.1"
 features = ["v3_10"]
 
 [dependencies.clippy]
-version = "0.0.103"
+version = "0.0.104"
 optional = true
-
