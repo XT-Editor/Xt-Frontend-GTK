@@ -11,18 +11,7 @@ after_script:
   - "script/after_cibuild"
 
 rust:
-  - stable
-  - beta
   - nightly
-
-matrix:
-  allow_failures:
-    - rust:
-      - stable
-
-os:
-  - linux
-  - osx
 
 addons:
   apt:
