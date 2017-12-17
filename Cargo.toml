@@ -1,15 +1,15 @@
 [package]
-name = "xtensis-gtk"
+name = "xt-frontend-gtk"
 version = "0.1.0"
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
 
 [lib]
-name = "xtensis_gtk"
+name = "xt_gtk"
 path = "src/lib.rs"
 
 [[bin]]
 name = "xtg"
-path = "src/bin/xtensis-gtk.rs"
+path = "src/bin/xt-gtk.rs"
 
 [dependencies]
 

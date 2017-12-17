@@ -1,8 +1,8 @@
 [root]
-name = "xtensis-gtk"
+name = "xt-frontend-gtk"
 version = "0.1.0"
 dependencies = [
- "clippy 0.0.103 (registry+https://github.com/rust-lang/crates.io-index)",
+ "clippy 0.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
  "gtk 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
@@ -55,15 +55,15 @@ dependencies = [
 
 [[package]]
 name = "clippy"
-version = "0.0.103"
+version = "0.0.104"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "clippy_lints 0.0.103 (registry+https://github.com/rust-lang/crates.io-index)",
+ "clippy_lints 0.0.104 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "clippy_lints"
-version = "0.0.103"
+version = "0.0.104"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
  "matches 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
@@ -312,8 +312,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 "checksum c_vec 1.0.12 (registry+https://github.com/rust-lang/crates.io-index)" = "aa9e1d9f7d49e289f36f19effbf3d5a5e30163ecf9c7a3c9be94d5374dec5b9a"
 "checksum cairo-rs 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "5b3e2dae876fba33394353e985bff24e011a18250cf0021d07b86900b77388b0"
 "checksum cairo-sys-rs 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)" = "e377d5ccba12485dbdd1d459d711b948bbbed867f5808b25e0e2f6c8a45935f6"
-"checksum clippy 0.0.103 (registry+https://github.com/rust-lang/crates.io-index)" = "5b4fabf979ddf6419a313c1c0ada4a5b95cfd2049c56e8418d622d27b4b6ff32"
-"checksum clippy_lints 0.0.103 (registry+https://github.com/rust-lang/crates.io-index)" = "ce96ec05bfe018a0d5d43da115e54850ea2217981ff0f2e462780ab9d594651a"
+"checksum clippy 0.0.104 (registry+https://github.com/rust-lang/crates.io-index)" = "ae3fb361e922a08b698e746d4f199ff2d1e8d4b5f1984eaf8881e720cf5b8e34"
+"checksum clippy_lints 0.0.104 (registry+https://github.com/rust-lang/crates.io-index)" = "70812027c1a8de9277d125557dce08262bc27508f2eb99592ad2d39a24a0b1c7"
 "checksum gdk 0.5.1 (registry+https://github.com/rust-lang/crates.io-index)" = "151196bd3a35bc157b7dca6ee98bb701dca59439dedd19d8a85b2d8759e0afaf"
 "checksum gdk-pixbuf 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)" = "f893bde751ef13bae431c5643021d0b9365b5455ab6b2febbc492bbe431d573b"
 "checksum gdk-pixbuf-sys 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)" = "f04793815a1e18b12de3b5bf41820c64ff84323510ecf3261a7f329eccd59500"

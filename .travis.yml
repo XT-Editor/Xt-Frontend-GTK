@@ -35,8 +35,8 @@ notifications:
     on_failure: always
   irc:
     channels:
-      - "chat.freenode.net#xtensis-editor"
-    nick: xtensis-travis
+      - "irc.mozilla.org#xt-editor"
+    nick: xt-travis
     on_success: never
     on_failure: always
     use_notice: true
