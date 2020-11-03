@@ -12,11 +12,11 @@ name = "xtg"
 path = "src/bin/xt-gtk.rs"
 
 [dependencies]
-gio = "0.6.0"
-gdk = "0.10.0"
+gio = "0.9.1"
+gdk = "0.13.2"
 
 [dependencies.gtk]
-version = "0.6.0"
+version = "0.9.2"
 features = ["v3_24"]
 
 [dependencies.clippy]
@@ -24,7 +24,7 @@ version = "0.0.302"
 optional = true
 
 [dependencies.clap]
-version = "2.32.0"
+version = "2.33.3"
 features = ["suggestions", "color", "wrap_help"]
 
 [profile.release]
