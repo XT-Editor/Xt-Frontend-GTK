@@ -2,6 +2,7 @@
 name = "xt-frontend-gtk"
 version = "0.1.0"
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
+license = "MIT OR Apache-2.0"
 
 [lib]
 name = "xt_gtk"
