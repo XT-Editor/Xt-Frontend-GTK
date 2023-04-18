@@ -1,16 +1,45 @@
 {
-  description = "Foo Bar";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs";
-  };
-  outputs = { self, nixpkgs }:
-    let
-      supportedSystems = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
-      forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
-      pkgsFor = nixpkgs.legacyPackages;
-    in {
-      packages = forAllSystems (system: {
-        default = pkgsFor.${system}.callPackage ./default.nix { };
-      });
+    flake-utils.url = "github:numtide/flake-utils";
+    naersk.url = "github:nix-community/naersk";
+
+    nixpkgs-mozilla = {
+      url = "github:mozilla/nixpkgs-mozilla";
+      flake = false;
     };
+  };
+
+  outputs = { self, flake-utils, naersk, nixpkgs, nixpkgs-mozilla }:
+    flake-utils.lib.eachDefaultSystem (system:
+      let
+        pkgs = (import nixpkgs) {
+          inherit system;
+
+          overlays = [
+            (import nixpkgs-mozilla)
+          ];
+        };
+
+        toolchain = (pkgs.rustChannelOf {
+          rustToolchain = ./rust-toolchain;
+          sha256 = "sha256-4vetmUhTUsew5FODnjlnQYInzyLNyDwocGa4IvMk3DM=";
+        }).rust;
+
+        naersk' = pkgs.callPackage naersk {
+          cargo = toolchain;
+          rustc = toolchain;
+        };
+
+      in rec {
+        # For `nix build` & `nix run`:
+        defaultPackage = naersk'.buildPackage {
+          src = ./.;
+        };
+
+        # For `nix develop` (optional, can be skipped):
+        devShell = pkgs.mkShell {
+          nativeBuildInputs = [ toolchain ];
+        };
+      }
+    );
 }
