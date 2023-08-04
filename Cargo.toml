@@ -10,7 +10,7 @@ path = "src/lib.rs"
 
 [[bin]]
 name = "xtg"
-path = "src/bin/xt-gtk.rs"
+path = "src/main.rs"
 
 [dependencies]
 gio = "0.18.1"
