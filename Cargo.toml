@@ -20,10 +20,6 @@ gdk = "0.17.1"
 version = "0.17.1"
 features = ["v3_24"]
 
-[dependencies.clippy]
-version = "0.0.302"
-optional = true
-
 [dependencies.clap]
 version = "4.3.19"
 features = ["suggestions", "color", "wrap_help"]
